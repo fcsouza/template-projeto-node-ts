@@ -41,6 +41,7 @@ $ cd template-projeto-node-ts
 
 # Install dependencies
 $ yarn install
+$ yarn dev:server
 
 Start Develop
 ```
