@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "tsc && NODE_ENV=production node build/src/server.js",
-    "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts",
+    "dev:server": "NODE_ENV=dev ts-node-dev --inspect --transpileOnly --ignore-watch node_modules src/server.ts",
     "migration:create": "typeorm migration:create --dir src/migrations --name",
     "migration:revert": "ts-node -r dotenv/config ./node_modules/typeorm/cli.js migration:revert",
     "migration:run": "ts-node -r dotenv/config ./node_modules/typeorm/cli.js migration:run",
