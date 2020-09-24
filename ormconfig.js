@@ -12,7 +12,8 @@ module.exports = {
   cli: {
     migrationsDir: "src/database/migrations",
   },
-  entities: [NODE_ENV == "dev" ? "src/models/*.{js,ts}" : "build/src/models/*.{js,ts}"],
-  migrations: [NODE_ENV == "dev" ? "src/database/migrations/*.{js,ts}" : "build/src/database/migrations/*.{js,ts}"],
+  entities: ["src/models/*.{js,ts}"],
+  migrations: ["src/database/migrations/*.{js,ts}"],
+  namingStrategy: new SnakeNamingStrategy(),
   ssl: false,
 };
