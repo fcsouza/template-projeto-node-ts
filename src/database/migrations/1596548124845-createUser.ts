@@ -36,6 +36,11 @@ export default class CreateUsers1588682467420 implements MigrationInterface {
             type: 'timestamp',
             default: 'now()',
           },
+          {
+            name: 'deletedAt',
+            type: 'timestamp',
+            default: 'now()',
+          },
         ],
       }),
     );

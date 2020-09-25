@@ -4,6 +4,7 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  DeleteDateColumn
 } from 'typeorm';
 
 @Entity('users')
@@ -24,12 +25,12 @@ class User {
   avatar: string;
 
   @CreateDateColumn()
-  created_at: Date;
+  createdAt: Date;
 
   @UpdateDateColumn()
-  updated_at: Date;
+  updatedAt: Date;
 
-  @Column({ nullable: true, select: false })
+  @DeleteDateColumn({ nullable: true })
   deletedAt: Date;
 }
 
